@@ -1,3 +1,18 @@
+// ClipboardQR - reads the clipboard, makes a QR code from it's contents
+// Copyright (C) 2015 Martin Hohenberg <martin.hohenberg@gmail.com>
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version. 
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of 
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+// GNU General Public License for more details. 
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include "QRWidget.hpp"
 #include <QPainter>
@@ -6,7 +21,7 @@
 
 QRWidget::QRWidget(QWidget *parent) :
     QWidget(parent),
-    data("Hello QR") //Note: The encoding fails with empty string so I just default to something else. Use the setQRData() call to change this.
+    data(" ") //Note: The encoding fails with empty string so I just default to something else. Use the setQRData() call to change this.
 {
 }
 
